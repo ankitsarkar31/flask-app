@@ -4,7 +4,7 @@
 Getting Started
 
 **Clone the repository:**
-git clone https://github.com/LondheShubham153/python-for-devops-masterclass.git
+git clone https://github.com/ankitsarkar31/flask-app/tree/main
 
 cd advanced/
 
