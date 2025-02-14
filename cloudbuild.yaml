@@ -3,11 +3,17 @@ steps:
     args:
       - build
       - '-t'
-      - gcr.io/$PROJECT_ID/flask-app
+      - us-central1-docker.pkg.dev/$PROJECT_ID/python-app
       - .
   - name: gcr.io/cloud-builders/docker
     args:
       - push
-      - gcr.io/$PROJECT_ID/flask-app
+      - us-central1-docker.pkg.dev/$PROJECT_ID/python-app
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args: ['run', 'deploy', 'python-app', '--image', 'us-central1-docker.pkg.dev/$PROJECT_ID/python-app', '--region', 'us-central1', '--allow-unauthenticates']
+images:
+- 'us-central1-docker.pkg.dev/$PROJECT_ID/python-app'
+      
 options:
   logging: CLOUD_LOGGING_ONLY
