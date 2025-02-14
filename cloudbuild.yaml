@@ -11,7 +11,7 @@ steps:
       - us-central1-docker.pkg.dev/$PROJECT_ID/python-app/flask
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: gcloud
-    args: ['run', 'deploy', 'python-app', '--image', 'us-central1-docker.pkg.dev/$PROJECT_ID/python-app', '--region', 'us-central1', '--allow-unauthenticates']
+    args: ['run', 'deploy', 'python-app', '--image', 'us-central1-docker.pkg.dev/$PROJECT_ID/python-app', '--region', 'us-central1', '--allow-unauthenticated']
 images:
 - 'us-central1-docker.pkg.dev/$PROJECT_ID/python-app/flask'
       
