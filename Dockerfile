@@ -18,7 +18,7 @@ ENV FLASK_APP=app.py
 ENV FLASK_RUN_HOST=0.0.0.0
 
 # Expose port 5000 to allow traffic to the Flask server
-EXPOSE 5000
+EXPOSE 8080
 
 # Run the Flask application
 CMD ["flask", "run"]
